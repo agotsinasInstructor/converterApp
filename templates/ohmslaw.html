@@ -1,0 +1,10 @@
+<h1>Ο νόμος του Ωμ</h1>
+
+R:  <input type="text" ng-model="ohmsR"><br>
+V:  <input type="text" ng-model="ohmsV"><br>
+I:  <input type="text" ng-model="ohmsI"><br><br>
+
+R = V/I :   {{calc.Ohms_R(ohmsV,ohmsI,true)}} <br>
+V = I*R :   {{calc.Ohms_V(ohmsI,ohmsR,true)}} <br>
+I = V/R :   {{calc.Ohms_I(ohmsR,ohmsV,true)}} <br>
+
