@@ -178,7 +178,7 @@ app.factory ('Converter', function () {
   };
 
   // converter meters to yards
-  Converter.prototype.MetersToKm = function (input) {
+  Converter.prototype.MetersToYd = function (input) {
     let output = input * 1.09361;
     return output;
   };
