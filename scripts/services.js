@@ -128,71 +128,71 @@ app.factory ('Converter', function () {
   // converter mm to meters
   Converter.prototype.MmToMeters = function (input) {
     let output = input * 0.001;
-    return output;
+    return output.toFixed (2);
   };
   // converter cm to meters
   Converter.prototype.CmToMeters = function (input) {
     let output = input * 0.01;
-    return output;
+    return output.toFixed (2);
   };
   // converter kilometres to meters
   Converter.prototype.KmToMeters = function (input) {
     let output = input * 1000;
-    return output;
+    return output.toFixed (2);
   };
 
   // converter yards to meters
   Converter.prototype.YardsToMeters = function (input) {
     let output = input * 0.9144;
-    return output;
+    return output.toFixed (2);
   };
 
   // converter feet to meters
   Converter.prototype.FeetToMeters = function (input) {
     let output = input * 0.3048;
-    return output;
+    return output.toFixed (2);
   };
 
   // converter inches to meters
   Converter.prototype.InchesToMeters = function (input) {
     let output = input * 0.0254;
-    return output;
+    return output.toFixed (2);
   };
 
   // converter meters to mm
   Converter.prototype.MetersToMM = function (input) {
     let output = input * 1000;
-    return output;
+    return output.toFixed (2);
   };
 
   // converter meters to mm
   Converter.prototype.MetersToCm = function (input) {
     let output = input * 100;
-    return output;
+    return output.toFixed (2);
   };
 
   // converter meters to km
   Converter.prototype.MetersToKm = function (input) {
     let output = input * 0.001;
-    return output;
+    return output.toFixed (3);
   };
 
   // converter meters to yards
   Converter.prototype.MetersToYd = function (input) {
     let output = input * 1.09361;
-    return output;
+    return output.toFixed (2);
   };
 
   // converter meters to feet
   Converter.prototype.MetersToFeet = function (input) {
     let output = input * 3.28084;
-    return output;
+    return output.toFixed (2);
   };
 
   // converter meters to inches
   Converter.prototype.MetersToFeet = function (input) {
     let output = input * 39.3701;
-    return output;
+    return output.toFixed (2);
   };
 
   return Converter;

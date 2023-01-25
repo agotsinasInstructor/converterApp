@@ -1,10 +1,19 @@
 app.controller ('converterController', [
   '$scope',
   'Converter',
-  function ($scope, Conveter) {
-    $scope.conv = new Conveter ();
+  function ($scope, Converter) {
+    $scope.conv = new Converter ();
     $scope.c = 0;
     $scope.k = 0;
+
+    // Initialize the variables for converter from meters to
+    $scope.inputM = 0;
+    $scope.outputMM = 0;
+    $scope.outputCM = 0;
+    $scope.outputKM = 0;
+    $scope.outputYD = 0;
+    $scope.outputIN = 0;
+    $scope.outputFT = 0;
   },
 ]);
 
@@ -12,7 +21,7 @@ app.controller ('calculationController', [
   '$scope',
   'Calculator',
   'Converter',
-  function ($scope, Calculator, Conveter) {
+  function ($scope, Calculator, Converter) {
     $scope.calc = new Calculator ();
     $scope.conv = new Converter ();
 
