@@ -1,0 +1,26 @@
+<h1>Μετατροπή μέτρων σε άλλα μεγέθη</h1>
+<div class="form-row">
+  <div class="col-md-4 mb-3">
+    <label for="meters">Εισάγετε τα μέτρα: M =</label
+    ><input
+      class="form-control-sm is-valid"
+      id="meters"
+      type="number"
+      ng-model="inputM"
+      value="Mark"
+      required
+      step="0.1"
+      placeholder="πχ 4,5"
+      max="1000"
+      min="0"
+    />
+    </div>
+  </div>
+  <div class="valid-feedback">Looks good!</div>
+  Σε mm : <input class="form-control-sm is-valid"  ng-model="output" /><br />
+  Σε cm : <input class="form-control-sm is-valid"  ng-model="output" /><br />
+  Σε km : <input class="form-control-sm is-valid" ng-model="output" /><br />
+  Σε yd : <input class="form-control-sm is-valid" ng-model="output" /><br />
+  Σε in : <input class="form-control-sm is-valid" ng-model="output" /><br />
+  Σε ft : <input class="form-control-sm is-valid" ng-model="output" /><br />
+</div>
