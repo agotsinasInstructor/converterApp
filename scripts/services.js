@@ -128,7 +128,7 @@ app.factory ('Converter', function () {
   // converter mm to meters
   Converter.prototype.MmToMeters = function (input) {
     let output = input * 0.001;
-    return output.toFixed (2);
+    return output.toFixed (3);
   };
   // converter cm to meters
   Converter.prototype.CmToMeters = function (input) {
