@@ -1,16 +1,18 @@
-<h1 class="display-4">Μετατροπή μεγεθών σε μετρα</h1>
+<h1 class="display-5">Μετατροπή διάφορων μεγεθών σε μέτρα</h1>
 <hr />
 <div class="form-row">
-  <div class="row">
+  <div class="row ">
     <div class="col-sm-5">
-      <label for="chosenSize" class="form-label col-form-label-lg">
+      <label for="selectedChoice" class="form-label col-form-label-lg fs-3">
         Επιλέξτε μέγεθος:</label
       ><br />
       <select
         name="chosenSize"
-        ng-model="chosenSize"
+        id="chosenSize"
+        ng-model="selectedChoice"
         required
-        class="form-select form-select-lg mb-3"
+        class="form-select form-select-lg mb-3 fs-4"
+        ng-change="onChangeChoices()"
       >
         <option value="0" selected disabled>--Διαλέξτε το μεγέθος σας--</option>
         <option ng-repeat="c in choices" ng-value="c.value">
@@ -19,12 +21,12 @@
       </select>
     </div>
     <div class="col-sm-5">
-      <label for="input" class="form-label col-form-label-lg">
+      <label for="input" class="form-label col-form-label-lg fs-3">
         Εισάγετε την τιμή:
       </label>
       <input
         type="number"
-        class="form-control form-control-lg mb-3"
+        class="form-control form-control-lg mb-3 fs-4"
         id="input"
         name="input"
         required
@@ -34,10 +36,36 @@
     </div>
   </div>
 </div>
-<div class="row" ng-if="inputM != '0' && inputM != null">
+<hr>
+<div class="row d-flex aligns-items-center" ng-if="inputM != '0' && inputM != null && selectedChoice !=0">
   <div
-    class="text-light col-sm-5 bg-success text-center p-2 mx-2 rounded-3 display-6"
+    class="text-light col-md-5 bg-primary text-center p-2 mx-2 rounded-3 display-6"
+    ng-model="inputM"
   >
-    {{conv.MmToMeters(inputM)}} μέτρα
+    <div ng-switch="selectedChoice">
+      <div ng-switch-when="mm">
+        {{conv.MmToMeters(inputM)}}  μέτρα
+      </div>
+      <div ng-switch-when="cm">
+        {{conv.CmToMeters(inputM)}} μέτρα
+      </div>
+      <div ng-switch-when="km">
+        {{conv.KmToMeters(inputM)}} μέτρα
+      </div>
+      <div ng-switch-when="yd">
+        {{conv.YardsToMeters(inputM)}} μέτρα
+      </div>
+      <div ng-switch-when="ft">
+        {{conv.FeetToMeters(inputM)}} μέτρα
+      </div>
+      <div ng-switch-when="inc">
+        {{conv.InchesToMeters(inputM)}} μέτρα
+      </div>
+    </div>
   </div>
+  <div class="col-sm-5 d-flex aligns-items-center justify-content-evenly">
+    <p class=" text-light text-black-50 fw-bolder fs-3 alert">
+    <span class="text-bg-secondary p-1 rounded-2">{{selectedChoice}}</span> <i class="bi bi-arrow-right mx-1"></i><span class="text-bg-primary p-1 rounded-3">m</span></p> 
+  </p></div>
 </div>
+

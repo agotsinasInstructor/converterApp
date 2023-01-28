@@ -9,12 +9,7 @@ app.controller ('converterController', [
     // Initialize the variables for converter from meters to
     $scope.inputM = 0;
     $scope.outputM = 0;
-    $scope.outputMM = 0;
-    $scope.outputCM = 0;
-    $scope.outputKM = 0;
-    $scope.outputYD = 0;
-    $scope.outputIN = 0;
-    $scope.outputFT = 0;
+    $scope.selectedChoice = 0;
     $scope.choices = [
       {value: 'mm', displayName: 'Χιλιοστά'},
       {value: 'cm', displayName: 'Εκατοστά'},
