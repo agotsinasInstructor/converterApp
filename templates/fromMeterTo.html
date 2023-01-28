@@ -1,0 +1,67 @@
+  <h1 class="display-5">Μετατροπή μέτρων σε άλλα μεγέθη</h1>
+  <hr>
+  <div class="form-row">
+    <div class="row">
+      <div class="col-sm-6">
+      <label class='form-label col-form-label-lg fs-3' for="meters">Εισάγετε τα μέτρα:</label
+      ><input
+        class="form-control fs-4 text-center "
+        id="meters"
+        type="number"
+        ng-model="inputM"
+        required
+        step="0.1"
+        placeholder="πχ 4,5"
+        min="0"
+      />
+      </div>
+      <div class="row py-3 " ng-if="inputM != '0' && inputM != null ">
+        <div class="col-sm-6">
+          <table class="table table-sm table-striped">
+            <thead class="text-bg-primary text-center m-2 p-2 fs-5 ">
+              <tr>
+                <th>Μέγεθος</th>
+                <th>Τιμή</th>
+              </tr>
+              </thead>
+            <tbody class="text-center">
+              <tr>
+                <td>Χιλιοστά (mm)</td>
+                <td>{{conv.MetersToMM(inputM)}}</td>
+              </tr>
+              <tr>
+                <td>Εκατοστά (cm)</td>
+                <td>{{conv.MetersToCm(inputM)}}</td>
+              </tr>
+              <tr>
+                <td>Χιλιόμετρα (km)</td>
+                <td>{{conv.MetersToKm(inputM)}}</td>
+              </tr>
+              <tr>
+                <td>Γιάρδες (yd)</td>
+                <td>{{conv.MetersToYd(inputM)}}</td>
+              </tr>
+              <tr>
+                <td>Ποδια (ft)</td>
+                <td>{{conv.MetersToFeet(inputM)}}</td>
+              </tr>
+              <tr>
+                <td>Ίντσες (in)</td>
+                <td>{{conv.MetersToFeet(inputM)}}</td>
+              </tr>
+            </tbody>
+            
+          </table>
+        </div>
+      </div>
+      
+    </div>
+      </div
+    <
+    
+  
+    
+  </div>
+  
+</div>
+
